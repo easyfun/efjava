@@ -56,5 +56,10 @@ public class UserServiceImpl implements UserService {
 //		service2.findUserById(2);
 	}
 
+	@Override
+	public UserService2 getService2() {
+		return service2;
+	}
+
 
 }

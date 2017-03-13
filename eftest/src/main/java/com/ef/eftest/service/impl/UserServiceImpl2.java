@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.ef.eftest.common.Tool;
 import com.ef.eftest.dao.UserDao;
 import com.ef.eftest.entity.User;
+import com.ef.eftest.service.UserService;
 import com.ef.eftest.service.UserService2;
 
 @Service

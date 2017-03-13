@@ -3,6 +3,8 @@ package com.ef.eftest;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ef.eftest.service.UserService;
+import com.ef.eftest.service.UserService2;
+import com.ef.eftest.service.impl.UserServiceImpl;
 
 
 public class Main {
@@ -15,7 +17,21 @@ public class Main {
 		 */
 //		UserServiceImpl userServiceImpl = context.getBean(UserServiceImpl.class);
 		UserService userService=(UserService)context.getBean("userServiceImpl");
+		UserService service=(UserService)context.getBean("userServiceImpl");
+		if (service==userService) {
+			System.out.println("same object");
+		}
 		
+		UserService2 userService2=(UserService2)context.getBean("userServiceImpl2");
+		UserService2 service2=userService.getService2();
+		if (service2==userService2) {
+			System.out.println("inner objext is same too");
+		}
+		
+		/*
+		 * 运行错误
+		 */
+//		UserServiceImpl userServiceImpl = context.getBean(UserServiceImpl.class);
 		
 		
 		/*
@@ -43,7 +59,7 @@ public class Main {
 		 * 
 		 * 
 		 */
-		userService.test2Tx();
+//		userService.test2Tx();
 		
 		
 		/*
@@ -62,7 +78,7 @@ public class Main {
 		 * begin;
 		 * select * from user where name='caocao' for update;（锁住）
 		 */
-//		UserService2 userService2=(UserService2)context.getBean("userServiceImpl2");
+//		userService2=(UserService2)context.getBean("userServiceImpl2");
 //		userService2.findUserByName("caocao");
 //		userService.findUserById(1);
 		

@@ -44,5 +44,5 @@
 	
 	<bean id="userServiceImpl" class="com.ef.eftest.service.impl.UserServiceImpl"></bean>
 	<bean id="userServiceImpl2" class="com.ef.eftest.service.impl.UserServiceImpl2"></bean>
-	
+	<bean class="com.ef.eftest.service.impl.UserServiceImpl"></bean>
 </beans>

@@ -8,4 +8,7 @@ public interface UserService {
 	
 	public void test2Tx();
 
+	public UserService2 getService2();
+
+
 }
